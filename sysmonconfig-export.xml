@@ -1,4 +1,6 @@
 <!--
+ My own config is specified betwwen [My config] comment.
+
   sysmon-config | A Sysmon configuration focused on default high-quality event tracing and easy customization by the community
   Source version:	70 | Date: 2019-12-04
   Source project:	https://github.com/SwiftOnSecurity/sysmon-config
@@ -227,6 +229,12 @@
 			<!--SECTION: Google-->
 			<CommandLine condition="begin with">"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --type=</CommandLine> <!--Google:Chrome: massive command-line arguments-->
 			<CommandLine condition="begin with">"C:\Program Files\Google\Chrome\Application\chrome.exe" --type=</CommandLine> <!--Google:Chrome: massive command-line arguments-->
+			<!--SECTION: [My config] -->
+			<Image condition="is">C:\Program Files (x86)\Kaspersky Lab\NetworkAgent\Up2Date.exe</Image>
+			<Image condition="is">C:\Program Files (x86)\Kaspersky Lab\NetworkAgent\ksnproxy.exe</Image>
+			<Image condition="is">C:\Program Files (x86)\Kaspersky Lab\NetworkAgent\vapm.exe</Image>
+			<Image condition="is">C:\Program Files (x86)\Kaspersky Lab\NetworkAgent\klcsldcl.exe</Image>
+			<!--SECTION: [/My config] -->
 		</ProcessCreate>
 	</RuleGroup>
 	
